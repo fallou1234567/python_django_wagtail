@@ -1,0 +1,28 @@
+{% load static wagtailcore_tags wagtailuserbar %}
+{% load wagtailroutablepage_tags %}
+
+{% include 'header/navbar.html' %}
+
+{% block content %}
+
+<div class="card text-center">
+    <div class="card-header">
+      NeoProd
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Hi!                   
+        {% if user.is_authenticated %}
+        {{user.username}} 
+        {% endif %}
+        you are welcome
+    </h5>
+      <p class="card-text">Since 1998, NEOPROD INTERNATIONAL has been innovating with outsourcing!
+        Thanks to proven processes, human and material resources, NEOPROD INTERNATIONAL is committed to the quality of the accounting provided by its teams.</p>
+    </div>
+    <div class="card-footer text-muted">
+      25 year ago
+    </div>
+  </div>
+{% endblock %}
+
+{% include 'footer/foot.html' %}
